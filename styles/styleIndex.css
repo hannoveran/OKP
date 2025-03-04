@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Monserrat", serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #EDF2FB;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 300px;
+}
+
+.logo img {
+    height: 120px;
+    margin: 10px;
+}
+
+.nav-links {
+    padding-top: 20px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li {
+    padding: 20px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.container-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.first-img {
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.first-img img {
+    height: 350px;
+    border-radius: 0 15px 15px 0;
+    position: relative;
+    z-index: 1; 
+    display: block; 
+}
+
+.img-box {
+    position: relative; 
+    display: inline-block; 
+}
+
+.pink-box {
+    position: absolute;
+    width: 150px; 
+    height: 150px;
+    background-color: #f5e6eb; 
+    top: 50px; 
+    left: 240px;
+    border-radius: 10px; 
+    z-index: 0;
+}
+
+.slogan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slogan h1 {
+    margin-bottom: 100px;
+    margin-left: 40px;
+    font-size: 2rem;
+}
+
+.slogan p {
+    margin: 40px;
+}
+
+.slogan button {
+    height: 40px;
+    width: 150px;
+    background: none;
+    border: 0.01em solid #D9D9D9;
+    border-radius: 25px;
+    margin-left: 40px;
+}
+
+.second-img img {
+    height: 450px;
+    border-radius: 15px 0 0 15px;
+}
+
+.blue-box {
+    position: absolute;
+    width: 180px; 
+    height: 300px;
+    background-color: #D2E6F8; 
+    top: 300px; 
+    left: -120px;
+    border-radius: 10px; 
+    z-index: 0;
+}
+
+.third-img {
+    display: flex;
+    align-self: flex-end;
+    position: relative;
+    z-index: 1; 
+    display: block;
+}
+
+.third-img img {
+    width: 300px;
+    border-radius: 15px 15px 0 0;
+}
+
+
+
+
+
+.categories-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 150px 0;
+    gap: 20px;
+}
+
+.category-skates-accessories {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.category-w-m,
+.category-skates-accessories div {
+    position: relative; 
+    width: 100%;
+    max-width: 400px;
+}
+
+.category-w-m img {
+    width: 400px;
+    border-radius: 15px;
+    display: block;
+}
+
+.category-skates-accessories img {
+    width: 330px;
+    border-radius: 15px;
+    display: block;
+}
+
+.categories-container button {
+    position: absolute;
+    bottom: 30px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    border: 2px solid #7390af;
+    border-radius: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.categories-container button a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.categories-container button:hover {
+    background-color: #7390af;
+}
+
+
+
+
+
+.popular-products h2{
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+.popular-products-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.popular-products-container img {
+    width: 350px;
+}
+
+.popular-product {
+    display: flex;
+    flex-direction: column;
+}
+
+.popular-product a {
+    text-decoration: none;
+    color: black;
+    padding-top: 25px;
+    text-align: center;
+    font-size: 25px;
+}
+
+
+
+footer {
+    background-color: #10002B;
+    margin-top: 120px;
+    padding-top: 30px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.footer h3 {
+    color: white;
+    font-size: 20px;
+    margin: 15px;
+}
+
+.footer div ul li {
+    list-style: none;
+    padding: 5px;
+}
+
+.footer div ul li a {
+    text-decoration: none;
+    color: rgb(205, 201, 233);
+}
+
+footer img {
+    width: 300px;
+    margin: 20px;
+}
