@@ -11,6 +11,10 @@ html {
     scroll-behavior: smooth;
 }
 
+
+/* header */
+
+
 header {
     background-color: #EDF2FB;
 }
@@ -89,7 +93,11 @@ nav ul li a {
 .slogan h1 {
     margin-bottom: 100px;
     margin-left: 40px;
-    font-size: 2rem;
+    font-size: 32px;
+    color: #10002B;
+    font-style: italic;
+    line-height: 1.5;
+    text-align: center;
 }
 
 .slogan p {
@@ -135,7 +143,7 @@ nav ul li a {
 }
 
 
-
+/* main */
 
 
 .categories-container {
@@ -224,6 +232,70 @@ nav ul li a {
     font-size: 25px;
 }
 
+
+
+.features {
+    background-color: #EDF2FB;
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    padding: 50px 0;
+    margin-top: 120px;
+}
+
+.features div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.features img {
+    width: 150px;
+}
+
+.features h4 {
+    padding: 20px;
+}
+
+.features p {
+    text-align: center;
+}
+
+
+
+
+
+.features-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 100px 80px;
+}
+
+.features-wrap-box {
+    display: flex;
+    gap: 15px;
+}
+
+.features-wrap-box-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.features-wrap img {
+    width: 60px;
+}
+
+.features-wrap p {
+    font-size: small;
+}
+
+
+
+
+/* footer */
 
 
 footer {
