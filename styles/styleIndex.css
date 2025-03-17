@@ -310,7 +310,7 @@ footer {
     gap: 100px;
 }
 
-.footer h3 {
+div > h3 {
     color: white;
     font-size: 20px;
     margin: 15px;

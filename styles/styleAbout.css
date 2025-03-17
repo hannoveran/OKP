@@ -171,4 +171,7 @@ h1 {
     margin: 50px 120px;
 }
 
+b + i {
+    font-size: 25px;
+}
 

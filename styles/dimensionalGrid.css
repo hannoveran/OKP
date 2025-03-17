@@ -41,7 +41,7 @@ nav ul li {
     list-style: none;
 }
 
-nav ul li a {
+.nav-links ul li a {
     text-decoration: none;
     color: black;
 }
@@ -109,3 +109,4 @@ footer img {
     width: 300px;
     margin: 20px;
 }
+
