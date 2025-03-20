@@ -115,19 +115,20 @@ h1 {
     padding-left: 20px;
 }
 
-.container-about-first {
+/* .container-about-first {
     display: flex;
     flex-direction: column;
     gap: 50px;
-}
+} */
 
-.choose {
+/* .choose {
     display: flex;
     gap: 90px;
-}
+} */
 
 .container-about-first img {
     width: 350px;
+    float: right;
 }
 
 .img-girl img{
@@ -157,6 +158,10 @@ h1 {
     color: #2c3e50;
 }
 
+.our-products dl dt:first-child {
+    font-size: 25px;
+}
+
 .our-products dt {
     font-weight: bold;
     color: #240046;
@@ -171,7 +176,13 @@ h1 {
     margin: 50px 120px;
 }
 
-b + i {
-    font-size: 25px;
+.contacts:after {
+    content: "Приємного катання!";
 }
+
+.contacts p:before {
+    content: "Дзвінки по Україні!";
+}
+
+
 

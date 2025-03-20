@@ -184,7 +184,7 @@ nav ul li a {
     left: 50%;
     transform: translateX(-50%);
     background-color: #ffffff;
-    border: 2px solid #7390af;
+    border: none;
     border-radius: 20px;
     padding: 8px 15px;
     cursor: pointer;
@@ -321,9 +321,17 @@ div > h3 {
     padding: 5px;
 }
 
-.footer div ul li a {
+.footer div ul li a:link {
     text-decoration: none;
     color: rgb(205, 201, 233);
+}
+
+.footer div ul li a:visited {
+    color: #8673af;
+}
+
+.footer div ul li a:active {
+    color: rgb(178, 200, 255);
 }
 
 footer img {
