@@ -70,7 +70,6 @@ nav ul li a {
 
 .img-box {
     position: relative; 
-    display: inline-block; 
 }
 
 .pink-box {
@@ -202,6 +201,35 @@ nav ul li a {
 
 
 
+.features {
+    background-color: #EDF2FB;
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    padding: 50px 0;
+    margin: 120px 0;
+}
+
+.features div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.features img {
+    width: 150px;
+}
+
+.features h4 {
+    padding: 20px;
+}
+
+.features p {
+    text-align: center;
+}
+
+
 
 
 .popular-products h2{
@@ -232,35 +260,6 @@ nav ul li a {
     font-size: 25px;
 }
 
-
-
-.features {
-    background-color: #EDF2FB;
-    display: flex;
-    justify-content: center;
-    gap: 120px;
-    padding: 50px 0;
-    margin-top: 120px;
-}
-
-.features div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.features img {
-    width: 150px;
-}
-
-.features h4 {
-    padding: 20px;
-}
-
-.features p {
-    text-align: center;
-}
 
 
 

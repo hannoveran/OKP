@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Monserrat", serif;
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.6;
+    text-align: left;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* header */
+
+header {
+    background-color: white !important;
+}
+
+
+
+/* main */
+
+h1 {
+    font-size: 40px;
+    font-weight: lighter;
+    margin-left: 60px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #251d7a5c;
+    border-radius: 15px;
+    margin: 10px;
+    text-align: left;
+}
+.product-card img {
+    width: 280px;
+    height: auto;
+    border-radius: 4px;
+}
+  

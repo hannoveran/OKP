@@ -1,0 +1,70 @@
+[
+    {
+        "id": "skates-001",
+        "name": "Сукня для виступу Aurora",
+        "price": "1500 грн",
+        "image": "https://i.postimg.cc/pXTPPhxN/JC380-MT-01-720x.jpg",
+        "category": "Ковзани"
+    },
+    {
+        "name": "Ковзани Jackson Ultima",
+        "price": "4500 грн",
+        "image": "https://i.postimg.cc/J0hC7gf3/JC380-FLBeauty-866b945b-0333-41ee-a0ce-b26e31060522-720x.jpg",
+        "category": "Ковзани"
+    },
+    {
+        "name": "Ковзани Jackson Ultima",
+        "price": "4500 грн",
+        "image": "https://i.postimg.cc/K8CGqZd6/JC500-Beauty-8231ed4b-bd5f-43b3-a77b-9d631a1ab7b2-720x.jpg",
+        "category": "Ковзани"
+    },
+    {
+        "name": "Ковзани Jackson Ultima",
+        "price": "4500 грн",
+        "image": "https://i.postimg.cc/6p86f71V/JC552-Beauty-7b53bad7-20bc-456f-bc00-7eb8e3f4d2d8-720x.jpg",
+        "category": "Ковзани"
+    },
+    {
+        "name": "Ковзани Jackson Ultima",
+        "price": "4500 грн",
+        "image": "https://i.postimg.cc/DzVhQxGF/JS180-BL-01-720x.jpg",
+        "category": "Ковзани"
+    },
+    {
+        "name": "Ковзани Jackson Ultima",
+        "price": "4500 грн",
+        "image": "https://i.postimg.cc/kgR9t0Bf/JS450-2000px1-f4f8b413-5157-4aa3-a566-4edfa4d0fbc4-720x.jpg",
+        "category": "Ковзани"
+    },
+    {
+        "name": "Ковзани Jackson Ultima",
+        "price": "4500 грн",
+        "image": "https://i.postimg.cc/FzPmjmyn/JS452-Beauty-Grey-2000px-720x.jpg",
+        "category": "Ковзани"
+    },
+    {
+        "name": "Ковзани Jackson Ultima",
+        "price": "4500 грн",
+        "image": "https://i.postimg.cc/gJsPWdTk/ST3300-PU-Beauty-720x.jpg",
+        "category": "Ковзани"
+    },
+    {
+        "name": "Ковзани Jackson Ultima",
+        "price": "4500 грн",
+        "image": "https://i.postimg.cc/mrQsm739/ST3400-HG-Beauty-720x.jpg",
+        "category": "Ковзани"
+    },
+    {
+        "name": "Ковзани Jackson Ultima",
+        "price": "4500 грн",
+        "image": "https://i.postimg.cc/rsyM0zrr/ST7100-SI-Beauty-720x.jpg",
+        "category": "Ковзани"
+    },
+    {
+        "name": "Ковзани Jackson Ultima",
+        "price": "4500 грн",
+        "image": "https://i.postimg.cc/8PPzsXR0/ST7102-Beauty-720x.jpg",
+        "category": "Ковзани"
+    }
+]
+  

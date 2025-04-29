@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Мамчук Анна">
+    <title>Ковзани</title>
+    <link rel="stylesheet" href="styles/styleIndex.css">
+    <link rel="stylesheet" href="styles/productCard.css">
+</head>
+<body>
+    <header>
+        <section class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logoRemoveBg.png" alt=""></a>
+            </div>
+            <div class="nav-links">
+                <nav>
+                    <ul>
+                        <li><a href="shoppingPage.html">Каталог</a></li>
+                        <li><a href="account.html">Акаунт</a></li>
+                        <li><a href="aboutUs.html">Про нас</a></li>
+                        <li><a href="">Кошик</a></li>
+                        <li><a href="#phone-number">Контакти</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+
+    <h1 class="category-title"></h1>
+    <section id="product-list" class="product-list"></section>
+
+
+    <section class="features-wrap">
+        <div class="features-wrap-box">
+            <img src="images/box.png" alt="Гарантія якості">
+            <div class="features-wrap-box-text">
+                <h4>Гарантія якості</h4>
+                <p>Кожен товар проходить ретельну <br> перевірку перед відправкою.</p>
+            </div>
+        </div>
+    
+        <div class="features-wrap-box">
+            <img src="images/delivery-truck .png" alt="Безкоштовна доставка">
+            <div class="features-wrap-box-text">
+                <h4>Безкоштовна доставка</h4>
+                <p>Ми доставимо ваше замовлення <br> безкоштовно при покупці 10.000.</p>
+            </div>
+        </div>
+    
+        <div class="features-wrap-box">
+            <img src="images/prepayment.png" alt="Зручна оплата">
+            <div class="features-wrap-box-text">
+                <h4>Зручна оплата</h4>
+                <p>Приймаємо оплату картками, <br> онлайн-платежами та післяплатою.</p>
+            </div>
+        </div> 
+    
+        <div class="features-wrap-box">
+            <img src="images/exchange.png" alt="Легке повернення">
+            <div class="features-wrap-box-text">
+                <h4>Легке повернення</h4>
+                <p>Можливість повернення або обміну <br> товару протягом 14 днів.</p>
+            </div>
+        </div>           
+    </section>
+
+
+    <footer>
+        <section class="footer">
+            <div>
+                <img src="images/logoBg.jpg" alt="">
+            </div>
+
+            <div>
+                <h3>Сторінки</h3>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="">Кошик</a></li>
+                    <li><a href="">Жіночий одяг</a></li>
+                    <li><a href="">Чоловічий одяг</a></li>
+                    <li><a href="aboutUs.html">Про нас</a></li>
+                    <li><a href="account.html">Акаунт</a></li>
+                    <li><a href="">Зв'язатись з підтримкою</a></li>
+                    <li><a href="">Написати відгук</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Корисні посилання</h3>
+                <ul>
+                    <li><a href="https://www.moyo.ua/ua/news/kak_vybrat_konki_poshagovaya_instrukciya_dlya_novichkov.html?srsltid=AfmBOorCi7uyFH3OH75NK09st1eelKuFXNc5tp2CokqJEmZNsnhjN98M">Гайд як обрати ковзани</a></li>
+                    <li><a href="">Гайд як визначити потрібний розмір ковзанів</a></li>
+                    <li><a href="dimensionalGrid.html">Розмірна сітка (в залежності від країни виробника)</a></li>
+                    <li><a href="">Повернення замовлення</a></li>
+                    <li><a href="">Доставка</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Соціальні мережі</h3>
+                <ul>
+                    <li><a href="">Instagram</a></li>
+                    <li><a href="">Facebook</a></li>
+                    <li><a href="">YouTube</a></li>
+                    <li><a href="">Twitter</a></li>
+                    <li><a href="" id="phone-number">+38 063 012 3456</a></li>
+                </ul>
+            </div>
+            
+        </section>
+    </footer>
+
+
+
+
+    <script>
+        function getCategoryFromHash() {
+          const hash = window.location.hash; // "#type=skates"
+          const match = hash.match(/type=([^&]+)/);
+          return match ? match[1] : null;
+        }
+      
+        const category = getCategoryFromHash();
+        const fileMap = {
+          skates: 'products/skates.json',
+          accessories: 'products/accessories.json',
+          women: 'products/women.json',
+          men: 'products/men.json'
+        };
+      
+        const jsonFile = fileMap[category];
+      
+        if (!jsonFile) {
+          document.body.innerHTML = '<h2>Категорія не знайдена</h2>';
+          throw new Error('Невідома категорія');
+        }
+      
+
+
+        const categoryNamesUa = {
+            skates: 'Ковзани',
+            accessories: 'Аксесуари',
+            women: 'Жіночий одяг',
+            men: 'Чоловічий одяг'
+        };
+
+        document.title = `Категорія: ${categoryNamesUa[category]}`;
+        document.querySelector('h1').textContent = categoryNamesUa[category];
+
+      
+        fetch(jsonFile)
+          .then(res => res.json())
+          .then(items => {
+            const list = document.getElementById('product-list');
+            list.innerHTML = '';
+      
+            items.forEach(item => {
+              const card = document.createElement('div');
+              card.className = 'product-card';
+              card.innerHTML = `
+                <img src="${item.image}" alt="${item.name}">
+                <h3>${item.name}</h3>
+                <p class="price">${item.price}</p>
+                <p>${item.description}</p>
+              `;
+              list.appendChild(card);
+            });
+          });
+      </script>
+      
+</body>
+</html>
