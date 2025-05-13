@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Мамчук Анна">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <title>Ковзани</title>
     <link rel="stylesheet" href="styles/styleIndex.css">
-    <link rel="stylesheet" href="styles/productCard.css">
+    <link rel="stylesheet" href="styles/category.css">
 </head>
 <body>
     <header>
@@ -149,25 +152,27 @@
         document.title = `Категорія: ${categoryNamesUa[category]}`;
         document.querySelector('h1').textContent = categoryNamesUa[category];
 
-      
+
         fetch(jsonFile)
-          .then(res => res.json())
-          .then(items => {
-            const list = document.getElementById('product-list');
-            list.innerHTML = '';
-      
-            items.forEach(item => {
-              const card = document.createElement('div');
-              card.className = 'product-card';
-              card.innerHTML = `
-                <img src="${item.image}" alt="${item.name}">
-                <h3>${item.name}</h3>
-                <p class="price">${item.price}</p>
-                <p>${item.description}</p>
-              `;
-              list.appendChild(card);
+            .then(res => res.json())
+            .then(items => {
+                const list = document.getElementById('product-list');
+                list.innerHTML = '';
+
+                items.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <a href="product.html?id=${item.id}&category=${category}">
+                    <img src="${item.image}" alt="${item.name}">
+                    <h3>${item.name}</h3>
+                    <p class="price">${item.price}</p>
+                    <p class="description">${item.description ? item.description.substring(0, 100) + '...' : ''}</p>
+                    </a>
+                `;
+                list.appendChild(card);
+                });
             });
-          });
       </script>
       
 </body>

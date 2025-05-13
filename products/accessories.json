@@ -1,86 +1,198 @@
 [
-    {
-      "name": "Сукня для виступу Aurora",
-      "price": "1500 грн",
-      "image": "https://i.postimg.cc/gj8DLyfM/51-ow9nqv-LL-AC-UL480-FMwebp-QL65.webp",
-      "category": "Аксесуари"
-    },
-    {
-        "name": "Сукня для виступу Aurora",
-        "price": "1500 грн",
-        "image": "https://i.postimg.cc/wxmFrH7h/51-y-QGlzll-L-AC-UL480-FMwebp-QL65.webp",
-        "category": "Аксесуари"
-    },
-    {
-      "name": "Сукня для виступу Aurora",
-      "price": "1500 грн",
-      "image": "https://i.postimg.cc/hP8sSr8v/510jc-WCVOd-S-AC-UL480-FMwebp-QL65.webp",
-      "category": "Аксесуари"
-    },
-    {
-        "name": "Сукня для виступу Aurora",
-        "price": "1500 грн",
-        "image": "https://i.postimg.cc/TwpGx1Z2/51-LBZTz-ZHL-AC-UL480-FMwebp-QL65.webp",
-        "category": "Аксесуари"
-    },
-    {
-      "name": "Сукня для виступу Aurora",
-      "price": "1500 грн",
-      "image": "https://i.postimg.cc/6qJVK2yC/51-O4v-Qu-Jvb-L-AC-UL480-FMwebp-QL65.webp",
-      "category": "Аксесуари"
-    },
-    {
-        "name": "Сукня для виступу Aurora",
-        "price": "1500 грн",
-        "image": "https://i.postimg.cc/bvr99f7S/51-Rr-GGCRip-L-AC-UL480-FMwebp-QL65.webp",
-        "category": "Аксесуари"
-    },
-    {
-      "name": "Сукня для виступу Aurora",
-      "price": "1500 грн",
-      "image": "https://i.postimg.cc/XJyKtc7V/51-S1-tqix-BL-AC-UL480-FMwebp-QL65.webp",
-      "category": "Аксесуари"
-    },
-    {
-        "name": "Сукня для виступу Aurora",
-        "price": "1500 грн",
-        "image": "https://i.postimg.cc/pL2ZyFkZ/61-Y7-XGc-YKL-AC-UL480-FMwebp-QL65.webp",
-        "category": "Аксесуари"
-    },
-    {
-      "name": "Сукня для виступу Aurora",
-      "price": "1500 грн",
-      "image": "https://i.postimg.cc/XvPc2DWH/61b-F8n1-Lmm-L-AC-UL480-FMwebp-QL65.webp",
-      "category": "Аксесуари"
-    },
-    {
-        "name": "Сукня для виступу Aurora",
-        "price": "1500 грн",
-        "image": "https://i.postimg.cc/ZKzjtgdX/61-JMN7t-JQDL-AC-UL480-FMwebp-QL65.webp",
-        "category": "Аксесуари"
-    },
-    {
-      "name": "Сукня для виступу Aurora",
-      "price": "1500 грн",
-      "image": "https://i.postimg.cc/gJfs0tBX/61q-Az-Up5z-OL-AC-UL480-FMwebp-QL65.webp",
-      "category": "Аксесуари"
-    },
-    {
-        "name": "Сукня для виступу Aurora",
-        "price": "1500 грн",
-        "image": "https://i.postimg.cc/T2gq9940/71-Qwl-YFJb0-L-AC-UL480-FMwebp-QL65.webp",
-        "category": "Аксесуари"
-    },
-    {
-      "name": "Сукня для виступу Aurora",
-      "price": "1500 грн",
-      "image": "https://i.postimg.cc/gkpyBh9W/71r-Z0-Fo-Nz5-L-AC-UL480-FMwebp-QL65.webp",
-      "category": "Аксесуари"
-    },
-    {
-        "name": "Сукня для виступу Aurora",
-        "price": "1500 грн",
-        "image": "https://i.postimg.cc/J0NNzrkv/81oq-y-Ee-JHS-AC-UL480-FMwebp-QL65.webp",
-        "category": "Аксесуари"
-    }
+  {
+    "id": 1,
+    "name": "Сукня для виступу Aurora (Рожевий)",
+    "price": "1500 грн",
+    "image": "https://ik.imagekit.io/xdluuktjz/SkateStyle_accessories/51J2ehnTJLL._AC_SX569_.jpg?updatedAt=1746633497239",
+    "description": "Елегантна сукня для фігурного катання з високоякісних матеріалів. Відмінно підходить для виступів та змагань.",
+    "category": "accessories",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Рожевий", "Блакитний", "Фіолетовий"],
+    "brand": "Aurora",
+    "material": "Лайкра, поліестер, мереживо",
+    "countryOfOrigin": "Україна",
+    "warranty": "30 днів"
+  },
+  {
+    "id": 2,
+    "name": "Сукня для виступу Aurora (Рожевий)",
+    "price": "1500 грн",
+    "image": "https://ik.imagekit.io/xdluuktjz/SkateStyle_accessories/71pt1piMuKL._AC_SX679_.jpg?updatedAt=1746633497923",
+    "description": "Елегантна сукня для фігурного катання з високоякісних матеріалів. Відмінно підходить для виступів та змагань.",
+    "category": "accessories",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Рожевий", "Блакитний", "Фіолетовий"],
+    "brand": "Aurora",
+    "material": "Лайкра, поліестер, мереживо",
+    "countryOfOrigin": "Україна",
+    "warranty": "30 днів"
+  },
+  {
+    "id": 3,
+    "name": "Сукня для виступу Aurora (Рожевий)",
+    "price": "1500 грн",
+    "image": "https://ik.imagekit.io/xdluuktjz/SkateStyle_accessories/61-Y7XGcYKL._AC_SX679_.jpg?updatedAt=1746633498299",
+    "description": "Елегантна сукня для фігурного катання з високоякісних матеріалів. Відмінно підходить для виступів та змагань.",
+    "category": "accessories",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Рожевий", "Блакитний", "Фіолетовий"],
+    "brand": "Aurora",
+    "material": "Лайкра, поліестер, мереживо",
+    "countryOfOrigin": "Україна",
+    "warranty": "30 днів"
+  },
+  {
+    "id": 4,
+    "name": "Сукня для виступу Aurora (Рожевий)",
+    "price": "1500 грн",
+    "image": "https://ik.imagekit.io/xdluuktjz/SkateStyle_accessories/61dy+8MzJvL._AC_SX679_.jpg?updatedAt=1746633498937",
+    "description": "Елегантна сукня для фігурного катання з високоякісних матеріалів. Відмінно підходить для виступів та змагань.",
+    "category": "accessories",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Рожевий", "Блакитний", "Фіолетовий"],
+    "brand": "Aurora",
+    "material": "Лайкра, поліестер, мереживо",
+    "countryOfOrigin": "Україна",
+    "warranty": "30 днів"
+  },
+  {
+    "id": 5,
+    "name": "Сукня для виступу Aurora (Рожевий)",
+    "price": "1500 грн",
+    "image": "https://ik.imagekit.io/xdluuktjz/SkateStyle_accessories/71FtQmS8L+S._AC_SX300_SY300_.jpg?updatedAt=1746633499756",
+    "description": "Елегантна сукня для фігурного катання з високоякісних матеріалів. Відмінно підходить для виступів та змагань.",
+    "category": "accessories",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Рожевий", "Блакитний", "Фіолетовий"],
+    "brand": "Aurora",
+    "material": "Лайкра, поліестер, мереживо",
+    "countryOfOrigin": "Україна",
+    "warranty": "30 днів"
+  },
+  {
+    "id": 6,
+    "name": "Сукня для виступу Aurora (Рожевий)",
+    "price": "1500 грн",
+    "image": "https://ik.imagekit.io/xdluuktjz/SkateStyle_accessories/51wJwk74ffL._AC_SY879_.jpg?updatedAt=1746633500009",
+    "description": "Елегантна сукня для фігурного катання з високоякісних матеріалів. Відмінно підходить для виступів та змагань.",
+    "category": "accessories",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Рожевий", "Блакитний", "Фіолетовий"],
+    "brand": "Aurora",
+    "material": "Лайкра, поліестер, мереживо",
+    "countryOfOrigin": "Україна",
+    "warranty": "30 днів"
+  },
+  {
+    "id": 7,
+    "name": "Сукня для виступу Aurora (Рожевий)",
+    "price": "1500 грн",
+    "image": "https://ik.imagekit.io/xdluuktjz/SkateStyle_accessories/61IvZrzq4YL._AC_SY879_.jpg?updatedAt=1746633500620",
+    "description": "Елегантна сукня для фігурного катання з високоякісних матеріалів. Відмінно підходить для виступів та змагань.",
+    "category": "accessories",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Рожевий", "Блакитний", "Фіолетовий"],
+    "brand": "Aurora",
+    "material": "Лайкра, поліестер, мереживо",
+    "countryOfOrigin": "Україна",
+    "warranty": "30 днів"
+  },
+  {
+    "id": 8,
+    "name": "Сукня для виступу Aurora (Рожевий)",
+    "price": "1500 грн",
+    "image": "https://ik.imagekit.io/xdluuktjz/SkateStyle_accessories/81oq-yEeJHS._AC_SX679_.jpg?updatedAt=1746633501535",
+    "description": "Елегантна сукня для фігурного катання з високоякісних матеріалів. Відмінно підходить для виступів та змагань.",
+    "category": "accessories",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Рожевий", "Блакитний", "Фіолетовий"],
+    "brand": "Aurora",
+    "material": "Лайкра, поліестер, мереживо",
+    "countryOfOrigin": "Україна",
+    "warranty": "30 днів"
+  },
+  {
+    "id": 9,
+    "name": "Сукня для виступу Aurora (Рожевий)",
+    "price": "1500 грн",
+    "image": "https://ik.imagekit.io/xdluuktjz/SkateStyle_accessories/610AgkdzpWL._AC_SY741_.jpg?updatedAt=1746633501892",
+    "description": "Елегантна сукня для фігурного катання з високоякісних матеріалів. Відмінно підходить для виступів та змагань.",
+    "category": "accessories",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Рожевий", "Блакитний", "Фіолетовий"],
+    "brand": "Aurora",
+    "material": "Лайкра, поліестер, мереживо",
+    "countryOfOrigin": "Україна",
+    "warranty": "30 днів"
+  },
+  {
+    "id": 10,
+    "name": "Сукня для виступу Aurora (Рожевий)",
+    "price": "1500 грн",
+    "image": "https://ik.imagekit.io/xdluuktjz/SkateStyle_accessories/51ATYxfuDZL._AC_SX679_.jpg?updatedAt=1746633502593",
+    "description": "Елегантна сукня для фігурного катання з високоякісних матеріалів. Відмінно підходить для виступів та змагань.",
+    "category": "accessories",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Рожевий", "Блакитний", "Фіолетовий"],
+    "brand": "Aurora",
+    "material": "Лайкра, поліестер, мереживо",
+    "countryOfOrigin": "Україна",
+    "warranty": "30 днів"
+  },
+  {
+    "id": 11,
+    "name": "Сукня для виступу Aurora (Рожевий)",
+    "price": "1500 грн",
+    "image": "https://ik.imagekit.io/xdluuktjz/SkateStyle_accessories/61bF8n1LmmL.__AC_SY300_SX300_QL70_FMwebp_.jpg?updatedAt=1746633503025",
+    "description": "Елегантна сукня для фігурного катання з високоякісних матеріалів. Відмінно підходить для виступів та змагань.",
+    "category": "accessories",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Рожевий", "Блакитний", "Фіолетовий"],
+    "brand": "Aurora",
+    "material": "Лайкра, поліестер, мереживо",
+    "countryOfOrigin": "Україна",
+    "warranty": "30 днів"
+  },
+  {
+    "id": 12,
+    "name": "Сукня для виступу Aurora (Рожевий)",
+    "price": "1500 грн",
+    "image": "https://ik.imagekit.io/xdluuktjz/SkateStyle_accessories/71Z7AobHhSL._AC_SX679_.jpg?updatedAt=1746633503714",
+    "description": "Елегантна сукня для фігурного катання з високоякісних матеріалів. Відмінно підходить для виступів та змагань.",
+    "category": "accessories",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Рожевий", "Блакитний", "Фіолетовий"],
+    "brand": "Aurora",
+    "material": "Лайкра, поліестер, мереживо",
+    "countryOfOrigin": "Україна",
+    "warranty": "30 днів"
+  },
+  {
+    "id": 13,
+    "name": "Сукня для виступу Aurora (Рожевий)",
+    "price": "1500 грн",
+    "image": "https://ik.imagekit.io/xdluuktjz/SkateStyle_accessories/71FMYEBk3vL._AC_SX679_.jpg?updatedAt=1746633504197",
+    "description": "Елегантна сукня для фігурного катання з високоякісних матеріалів. Відмінно підходить для виступів та змагань.",
+    "category": "accessories",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Рожевий", "Блакитний", "Фіолетовий"],
+    "brand": "Aurora",
+    "material": "Лайкра, поліестер, мереживо",
+    "countryOfOrigin": "Україна",
+    "warranty": "30 днів"
+  },
+  {
+    "id": 14,
+    "name": "Сукня для виступу Aurora (Рожевий)",
+    "price": "1500 грн",
+    "image": "https://ik.imagekit.io/xdluuktjz/SkateStyle_accessories/61aL-sQ04nL._AC_SY550_.jpg?updatedAt=1746633504673",
+    "description": "Елегантна сукня для фігурного катання з високоякісних матеріалів. Відмінно підходить для виступів та змагань.",
+    "category": "accessories",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Рожевий", "Блакитний", "Фіолетовий"],
+    "brand": "Aurora",
+    "material": "Лайкра, поліестер, мереживо",
+    "countryOfOrigin": "Україна",
+    "warranty": "30 днів"
+  }
 ]

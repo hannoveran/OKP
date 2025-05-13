@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Мамчук Анна">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <title>Товар | Сукня</title>
+    <link rel="stylesheet" href="styles/styleIndex.css">
+    <link rel="stylesheet" href="styles/product.css">
+    <style>
+        #clickBtn, #removeHandlerBtn {
+            background-color: rgb(255, 255, 255);
+            padding: 8px;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+
+        .features-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+        
+        .features-list li {
+            padding: 8px 12px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .features-list li:hover {
+            background-color: #f7f7f7;
+        }
+        
+        .features-list li.highlighted {
+            background-color: #e8ebff;
+            font-weight: bold;
+        }
+        
+        .menu-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 15px 0;
+        }
+        
+        .menu-buttons button {
+            padding: 8px 15px;
+            background-color: #f0f0f0;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .menu-buttons button:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .menu-buttons button.active {
+            background-color: #ebecff;
+            border-color: #b8d6ff;
+        }
+        
+        .recommendations-content {
+            margin-top: 15px;
+            padding: 15px;
+            border: 1px solid #e9eaff;
+            border-radius: 4px;
+            display: none;
+        }
+        
+        /* Стилі для патерну "Поведінка" */
+        [data-behavior="menu"] button {
+            position: relative;
+        }
+        
+        [data-behavior="menu"] button::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #4c85ff;
+            transition: width 0.3s;
+        }
+        
+        [data-behavior="menu"] button:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logoRemoveBg.png" alt=""></a>
+            </div>
+            <div class="nav-links">
+                <nav>
+                    <ul>
+                        <li><a href="shoppingPage.html">Каталог</a></li>
+                        <li><a href="account.html">Акаунт</a></li>
+                        <li><a href="aboutUs.html">Про нас</a></li>
+                        <li><a href="">Кошик</a></li>
+                        <li><a href="#phone-number">Контакти</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+
+    
+
+
+    <section class="product-container" id="product-container">
+        <section class="main-description">
+            <div class="product-images">
+                <img src="https://ik.imagekit.io/xdluuktjz/SkateStyle_women/51CBas+1fsL._AC_SX569_.jpg?updatedAt=1746629563727" alt="Чорна сукня для виступів" id="product-image" style="max-width: 100%; height: auto;">
+            </div>
+            <div class="product-info">
+                <h1 class="product-name" id="product-name">Чорна сукня для виступів</h1>
+                <div class="product-description" onclick="showMoreDescription()">Сукня зі стразами та частково червоною спідницею</div>
+                <p class="product-price">2500 грн</p>
+
+                <div class="product-options">
+                    <h3>Розмір</h3>
+                    <div class="size-options">
+                        <div class="size-option" data-size="XS">XS</div>
+                        <div class="size-option" data-size="S">S</div>
+                        <div class="size-option" data-size="M">M</div>
+                        <div class="size-option" data-size="L">L</div>
+                    </div>
+
+                    <h3>Колір</h3>
+                    <div class="color-options">
+                        <div class="color-option" data-color="Чорний">Чорний</div>
+                        <div class="color-option" data-color="Синій">Синій</div>
+                    </div>
+
+                    <div id="selection-error" class="error"></div>
+                </div>
+
+                <div class="quantity-selector">
+                    <button id="decrease-qty">-</button>
+                    <input id="quantity" value="1" min="1" max="10" type="number">
+                    <button id="increase-qty">+</button>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="add-to-cart" id="add-to-cart">Додати до кошика</button>
+                    <button class="buy-now" id="buy-now">Купити зараз</button>
+                </div>
+
+                <button id="clickBtn">Доставка</button>
+                <button id="removeHandlerBtn">Самовивіз</button>
+
+                <div class="product-features">
+                    <h3>Особливості товару:</h3>
+                    <ul class="features-list" id="features-list">
+                        <li data-feature="material">Якісні тканини (бавовна, поліестер, оксамит)</li>
+                        <li data-feature="stones">Ручне пришивання стразів</li>
+                        <li data-feature="design">Унікальний дизайн</li>
+                        <li data-feature="comfort">Зручна для виступів та тренувань</li>
+                        <li data-feature="care">Легкий догляд</li>
+                    </ul>
+                </div>
+                
+                <div class="recommendations-menu">
+                    <h3>Що ще може знадобитись:</h3>
+                    <div class="menu-buttons" id="recommendations-menu" data-behavior="menu">
+                        <button data-action="showSkates">Ковзани</button>
+                        <button data-action="showProtection">Захист</button>
+                        <button data-action="showAccessories">Аксесуари</button>
+                        <button data-action="showTights">Колготки</button>
+                    </div>
+                </div>
+                
+                <div id="recommendations-content" class="recommendations-content">
+                    
+                </div>
+            </div>
+            </div>
+        </section>
+    </section>
+
+    <script>
+        // 2. Event handler function assigned via attribute (in HTML)
+        function showMoreDescription() {
+            alert("Сукня зі стразами та частково червоною спідницею. Матеріали: бавовна, поліестер, оксамит");
+        }
+
+       
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Using a mouse event (mouseover)
+            const productName = document.getElementById('product-name');
+            productName.onmouseover = function() {
+                this.style.color = 'red';
+            };
+            productName.onmouseout = function() {
+                this.style.color = '';
+            };
+
+            // 3. Event handler assigned via property
+            const decreaseQty = document.getElementById('decrease-qty');
+            const increaseQty = document.getElementById('increase-qty');
+            const quantityInput = document.getElementById('quantity');
+
+            decreaseQty.addEventListener('click', function() {
+                if (parseInt(quantityInput.value) > 1) {
+                    quantityInput.value = parseInt(quantityInput.value) - 1;
+                }
+            });
+
+            increaseQty.addEventListener('click', function() {
+                if (parseInt(quantityInput.value) < 10) {
+                    quantityInput.value = parseInt(quantityInput.value) + 1;
+                }
+            });
+
+
+            // 4. Multiple event handlers using addEventListener
+            const productPrice = document.querySelector('.product-price');
+            function price1() {
+                alert("Ціна:"+ productPrice.innerHTML);
+            }
+
+            function price2() {
+                console.log("Ціна:"+ productPrice.innerHTML);
+            }
+
+            productPrice.addEventListener('click', price1);
+            productPrice.addEventListener('click', price2);
+
+            // 5. Event handler object with handleEvent method
+            const colorOptionsHandler = {
+                handleEvent: function() {
+                    if (event.type === 'mouseover') {
+                        console.log('Element with mouseover:', event.currentTarget);
+                        event.currentTarget.style.backgroundColor = '#f0f0f0';
+                    } else if (event.type === 'mouseout') {
+                        event.currentTarget.style.backgroundColor = '';
+                    }
+                }
+            };
+
+            const colorOptions = document.querySelectorAll('.color-option');
+            colorOptions.forEach(option => {
+                option.addEventListener('mouseover', colorOptionsHandler);
+                option.addEventListener('mouseout', colorOptionsHandler);
+            });
+
+            // 6. Demonstrating removeEventListener while maintaining functionality
+            const clickBtn = document.getElementById('clickBtn');
+            const removeHandlerBtn = document.getElementById('removeHandlerBtn');
+
+            // Функція-обробник
+            function handleClick() {
+                alert('Варість доставки 30грн!');
+            }
+
+            // Додаємо обробник події
+            clickBtn.addEventListener('click', handleClick);
+
+            // Видаляємо обробник після натискання на іншу кнопку
+            removeHandlerBtn.addEventListener('click', () => {
+                clickBtn.removeEventListener('click', handleClick);
+                alert('Ви обрали самовивіз!');
+            });
+
+
+            // Original event listeners
+            const sizeOptions = document.querySelectorAll('.size-option');
+            sizeOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Видалення виділення з усіх інших розмірів
+                    sizeOptions.forEach(el => el.classList.remove('selected'));
+                    // Виділення поточного розміру
+                    this.classList.add('selected');
+                });
+            });
+
+            const existingColorOptions = document.querySelectorAll('.color-option');
+            existingColorOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Видалення виділення з усіх інших кольорів
+                    existingColorOptions.forEach(el => el.classList.remove('selected'));
+                    // Виділення поточного кольору
+                    this.classList.add('selected');
+
+                    // Зміна зображення залежно від кольору
+                    const productImage = document.getElementById('product-image');
+                    if (this.dataset.color === 'Синій') {
+                        productImage.src = 'https://ik.imagekit.io/xdluuktjz/SkateStyle_women/61e+EhWAhML._AC_SX569_.jpg?updatedAt=1746629564177';
+                    } else {
+                        productImage.src = 'https://ik.imagekit.io/xdluuktjz/SkateStyle_women/51CBas+1fsL._AC_SX569_.jpg?updatedAt=1746629563727';
+                    }
+                });
+            });
+
+
+            // Validation function
+            function validateSelection() {
+                const selectedSize = document.querySelector('.size-option.selected');
+                const selectedColor = document.querySelector('.color-option.selected');
+                const errorElement = document.getElementById('selection-error');
+
+                if (!selectedSize && !selectedColor) {
+                    errorElement.textContent = 'Будь ласка, виберіть розмір та колір';
+                    return false;
+                }
+                if (!selectedSize) {
+                    errorElement.textContent = 'Будь ласка, виберіть розмір';
+                    return false;
+                }
+                if (!selectedColor) {
+                    errorElement.textContent = 'Будь ласка, виберіть колір';
+                    return false;
+                }
+                
+                errorElement.textContent = '';
+                return true;
+            }
+
+            // Add to cart with removeEventListener demonstration
+            const mainAddToCartBtn = document.getElementById('add-to-cart');
+            mainAddToCartBtn.addEventListener('click', originalAddToCartHandler);
+
+            // Simulate removing and re-adding the event listener
+            setTimeout(() => {
+                // Remove the original event listener
+                mainAddToCartBtn.removeEventListener('click', originalAddToCartHandler);
+                
+                // Add a new event listener with the same functionality
+                mainAddToCartBtn.addEventListener('click', originalAddToCartHandler);
+            }, 5000);
+
+            // Buy now handler
+            function handleBuyNow() {
+                if (!validateSelection()) return;
+
+                const productName = document.getElementById('product-name').textContent;
+                const selectedSize = document.querySelector('.size-option.selected').dataset.size;
+                const selectedColor = document.querySelector('.color-option.selected').dataset.color;
+                const quantity = document.getElementById('quantity').value;
+                const price = 2500 * parseInt(quantity);
+
+                alert(`Оформлення замовлення:\n\n` +
+                    `Назва: ${productName}\n` +
+                    `Розмір: ${selectedSize}\n` +
+                    `Колір: ${selectedColor}\n` +
+                    `Кількість: ${quantity}\n` +
+                    `Загальна вартість: ${price} грн\n\n` +
+                    `Перехід до сторінки оплати...`);
+            }
+
+            // Assign buy now handler
+            document.getElementById('buy-now').addEventListener('click', handleBuyNow);
+        });
+        
+        // 1. Обробник кліків для списку особливостей з використанням event.target
+            const featuresList = document.getElementById('features-list');
+            featuresList.addEventListener('click', function(event) {
+                // Використовуємо event.target для визначення елементу, на який клікнули
+                const clickedItem = event.target;
+                
+                // Перевіряємо, що клік був на елементі LI
+                if (clickedItem.tagName === 'LI') {
+                    // Показуємо різну інформацію залежно від data-feature атрибуту
+                    const featureType = clickedItem.getAttribute('data-feature');
+                    
+                    // Видаляємо підсвічування з усіх елементів
+                    const allItems = this.querySelectorAll('li');
+                    allItems.forEach(item => item.classList.remove('highlighted'));
+                    
+                    // Додаємо підсвічування до вибраного елементу
+                    clickedItem.classList.add('highlighted');
+                    
+                    // Відображаємо інформацію залежно від вибраної особливості
+                    let message = '';
+                    switch(featureType) {
+                        case 'material':
+                            message = 'Використовуємо тільки якісні тканини: бавовна, поліестер та оксамит для максимального комфорту під час виступів.';
+                            break;
+                        case 'stones':
+                            message = 'Кожен страз пришивається вручну нашими майстрами, забезпечуючи міцність навіть при активних рухах на льоду.';
+                            break;
+                        case 'design':
+                            message = 'Дизайн розроблений професійними фігуристами та модельєрами для найкращого вигляду на льоду.';
+                            break;
+                        case 'comfort':
+                            message = 'Сукня не обмежує рухи, дозволяючи виконувати найскладніші елементи програми.';
+                            break;
+                        case 'care':
+                            message = 'Можна прати при температурі до 30°C, не використовуючи відбілювач. Сушити в розправленому вигляді.';
+                            break;
+                    }
+                    
+                    alert(message);
+                }
+            });
+            
+            // 2. Реалізація меню з використанням одного обробника та атрибутів data-*
+            const recommendationsMenu = document.getElementById('recommendations-menu');
+            const recommendationsContent = document.getElementById('recommendations-content');
+            
+            // Додаємо один обробник для всього меню
+            recommendationsMenu.addEventListener('click', function(event) {
+                // Перевіряємо, що клік був на кнопці
+                if (event.target.tagName === 'BUTTON') {
+                    // Отримуємо значення data-action атрибуту
+                    const action = event.target.getAttribute('data-action');
+                    
+                    // Видаляємо активний стан з усіх кнопок
+                    const allButtons = this.querySelectorAll('button');
+                    allButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Додаємо активний стан до натиснутої кнопки
+                    event.target.classList.add('active');
+                    
+                    // Показуємо відповідний контент
+                    let content = '';
+                    switch(action) {
+                        case 'showSkates':
+                            content = `
+                                <h4>Рекомендовані ковзани</h4>
+                                <p>Для професійних виступів рекомендуємо:</p>
+                                <ul>
+                                    <li>Edea Overture (початковий рівень)</li>
+                                    <li>Edea Chorus (середній рівень)</li>
+                                    <li>Jackson Elite (професійний рівень)</li>
+                                </ul>
+                                <p>Підберіть ковзани, що відповідають вашому рівню підготовки.</p>
+                            `;
+                            break;
+                        case 'showProtection':
+                            content = `
+                                <h4>Захист для фігуристів</h4>
+                                <p>Рекомендуємо додатково придбати:</p>
+                                <ul>
+                                    <li>Захисні шорти з амортизацією</li>
+                                    <li>Наколінники для фігурного катання</li>
+                                    <li>Захисні рукавички</li>
+                                </ul>
+                            `;
+                            break;
+                        case 'showAccessories':
+                            content = `
+                                <h4>Аксесуари для виступів</h4>
+                                <p>Доповніть образ:</p>
+                                <ul>
+                                    <li>Шпильки для волосся зі стразами</li>
+                                    <li>Сіточка для волосся</li>
+                                    <li>Чохли для лез</li>
+                                    <li>Спортивна сумка для фігурного катання</li>
+                                </ul>
+                            `;
+                            break;
+                        case 'showTights':
+                            content = `
+                                <h4>Професійні колготки</h4>
+                                <p>До цієї сукні підійдуть:</p>
+                                <ul>
+                                    <li>Чорні колготки 70 ден з ефектом мерехтіння</li>
+                                    <li>Тілесні колготки 50 ден</li>
+                                    <li>Колготки з блискітками для виступів</li>
+                                </ul>
+                            `;
+                            break;
+                    }
+                    
+                    // Відображаємо контент
+                    recommendationsContent.innerHTML = content;
+                    recommendationsContent.style.display = 'block';
+                }
+            });
+            
+            // 3. Патерн проектування "Поведінка" через атрибути data-*
+            // Знаходимо всі елементи з атрибутом data-behavior
+            document.querySelectorAll('[data-behavior]').forEach(element => {
+                const behavior = element.getAttribute('data-behavior');
+                
+                switch(behavior) {
+                    case 'menu':
+                        // Додаємо обробник, який відстежує останній активний елемент меню
+                        element.addEventListener('mouseleave', function() {
+                            // Запам'ятовуємо останній активний елемент
+                            const activeButton = this.querySelector('button.active');
+                            if (activeButton) {
+                                // Зберігаємо ID останнього активного елемента в localStorage
+                                localStorage.setItem('lastActiveMenuItem', activeButton.getAttribute('data-action'));
+                            }
+                        });
+                        
+                        // При завантаженні сторінки перевіряємо, чи є збережений активний елемент
+                        const lastActive = localStorage.getItem('lastActiveMenuItem');
+                        if (lastActive) {
+                            const button = element.querySelector(`button[data-action="${lastActive}"]`);
+                            if (button) {
+                                // Імітуємо клік на цю кнопку, щоб відновити попередній стан
+                                setTimeout(() => {
+                                    button.click();
+                                }, 1000);
+                            }
+                        }
+                        break;
+                        
+                    // Можна додати інші типи поведінки за потреби
+                }
+            });
+    </script>
+</body>
+</html>
