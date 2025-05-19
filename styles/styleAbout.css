@@ -115,16 +115,16 @@ h1 {
     padding-left: 20px;
 }
 
-/* .container-about-first {
+.container-about-first {
     display: flex;
     flex-direction: column;
     gap: 50px;
-} */
+}
 
-/* .choose {
+.choose {
     display: flex;
     gap: 90px;
-} */
+}
 
 .container-about-first img {
     width: 350px;

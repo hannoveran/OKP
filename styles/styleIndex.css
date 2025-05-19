@@ -149,7 +149,14 @@ nav ul li a {
     display: flex;
     justify-content: space-evenly;
     margin: 150px 0;
-    gap: 20px;
+}
+
+.categories-container img {
+    transition: transform 0.3s ease;
+}
+
+.categories-container img:hover {
+    transform: scale(0.95);
 }
 
 .category-skates-accessories {
@@ -172,9 +179,16 @@ nav ul li a {
 }
 
 .category-skates-accessories img {
-    width: 330px;
+    width: 300px;
     border-radius: 15px;
     display: block;
+}
+
+.category-skates img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .categories-container button {

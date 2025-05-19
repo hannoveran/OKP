@@ -60,13 +60,13 @@
     <main>
         <section class="categories-container">
             <div class="category-w-m">
-                <img src="images/indexImages/womenSection.jpg" alt="">
+                <img src="https://ik.imagekit.io/xdluuktjz/SkateStyle_index/chique1685.jpg_v=1701163343&width=800?updatedAt=1747475656186" alt="">
                 <button><a href="category.html#type=women" class="imgbtn">Жіночий одяг</a></button>
             </div>
 
             <div class="category-skates-accessories">
-                <div>
-                    <img src="images/indexImages/skatesSection.jpg" alt="">
+                <div class="category-skates">
+                    <img src="https://ik.imagekit.io/xdluuktjz/SkateStyle_index/Jackson%20Ultima%20500%20figure%20s....jpg?updatedAt=1747476293112" alt="">
                     <button><a href="category.html#type=skates" class="imgbtn">Ковзани</a></button>
                 </div>
                 <div>
@@ -76,7 +76,7 @@
             </div>
 
             <div class="category-w-m">
-                <img src="images/indexImages/menSection.jpg" alt="">
+                <img src="https://ik.imagekit.io/xdluuktjz/SkateStyle_index/234.png_v=1741103360&width=800?updatedAt=1747475721217" alt="">
                 <button><a href="category.html#type=men" class="imgbtn">Чоловічий одяг</a></button>
             </div>
         </section>
@@ -212,5 +212,29 @@
             
         </section>
     </footer>
+
+    <script>
+        document.onmouseover = document.onmouseout = handler;
+
+        function handler(event) {
+
+            function str(el) {
+                if (!el) return "null"
+                return el.className || el.tagName;
+            }
+
+            log.value += event.type + ':  ' +
+                'target=' + str(event.target) +
+                ',  relatedTarget=' + str(event.relatedTarget) + "\n";
+            log.scrollTop = log.scrollHeight;
+
+            if (event.type == 'mouseover') {
+                event.target.style.background = 'pink'
+            }
+            if (event.type == 'mouseout') {
+                event.target.style.background = ''
+            }
+        }
+    </script>
 </body>
 </html>

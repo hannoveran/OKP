@@ -10,6 +10,35 @@
     <title>Ковзани</title>
     <link rel="stylesheet" href="styles/styleIndex.css">
     <link rel="stylesheet" href="styles/category.css">
+    <style>
+        .container {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .wardrobe, .try-on-zone {
+            border: 2px dashed #aaa;
+            padding: 20px;
+            width: 300px;
+            height: 400px;
+            position: relative;
+        }
+
+        .wardrobe img, .try-on-zone img {
+            width: 80px;
+            height: auto;
+            cursor: grab;
+            user-select: none;
+        }
+
+        .try-on-zone {
+            background-image: url('images/model.png'); /* або силует */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -68,6 +97,21 @@
             </div>
         </div>           
     </section>
+
+    <div class="container">
+        <div class="wardrobe" id="wardrobe">
+            <img src="img_lab8/71FtQmS8L S._AC_SX300_SY300_-Photoroom.png" class="draggable">
+            <img src="img_lab8/61RlMdvXY8L._AC_SX679_-Photoroom.png" class="draggable">
+            <img src="img_lab8/61p4ov-TtQL._AC_SX569_-Photoroom.png" class="draggable">
+            <img src="img_lab8/61nCxYHZPgS._AC_SX679_-Photoroom.png" class="draggable">
+            <img src="img_lab8/61IvZrzq4YL._AC_SY879_-Photoroom.png" class="draggable">
+            <img src="img_lab8/61bF8n1LmmL.__AC_SY300_SX300_QL70_FMwebp_-Photoroom.png" class="draggable">
+            <img src="img_lab8/51eK-80U2fL._AC_SX679_-Photoroom.png" class="draggable">
+            <img src="img_lab8/41oKBTFEC2L._AC_SX569_-Photoroom.png" class="draggable">
+        </div>
+
+        <div class="try-on-zone" id="tryOnZone"></div>
+    </div>
 
 
     <footer>
@@ -172,6 +216,89 @@
                 `;
                 list.appendChild(card);
                 });
+            });
+
+            // 1
+            const productList = document.querySelector(".product-list");
+
+            productList.addEventListener("mouseover", (event) => {
+                const card = event.target.closest(".product-card");
+                if (card && productList.contains(card)) {
+                    card.style.boxShadow = "0 0 15px rgba(0,0,0,0.2)";
+                }
+            });
+
+            productList.addEventListener("mouseout", (event) => {
+                const card = event.target.closest(".product-card");
+                if (card && productList.contains(card)) {
+                    if (!card.contains(event.relatedTarget)) {
+                    card.style.boxShadow = "none";
+                    }
+                }
+            });
+
+
+            // 2
+            const navLinks = document.querySelectorAll('.nav-links a');
+
+            navLinks.forEach(link => {
+                link.addEventListener('mousemove', () => {
+                    link.style.backgroundColor = '#cceeff';
+                    link.style.color = '#000';
+                });
+
+                link.addEventListener('mouseout', () => {
+                    link.style.backgroundColor = "";
+                    link.style.color = "";
+                });
+            });
+
+            //3
+            const wardrobe = document.querySelector(".wardrobe");
+            const tryOnZone = document.getElementById("tryOnZone");
+
+            let dragged = null;
+            let offsetX = 0;
+            let offsetY = 0;
+
+            document.addEventListener("mousedown", (e) => {
+                if (e.target.classList.contains("draggable")) {
+                        // Якщо ще не у try-on зоні — перемістимо в неї
+                        if (!tryOnZone.contains(e.target)) {
+                            tryOnZone.appendChild(e.target);
+                            e.target.style.position = "absolute";
+                            e.target.style.left = "10px";
+                            e.target.style.top = "10px";
+                        }
+
+                        dragged = e.target;
+                        dragged.style.zIndex = "1000";
+
+                        const rect = dragged.getBoundingClientRect();
+                        offsetX = e.clientX - rect.left;
+                        offsetY = e.clientY - rect.top;
+                }
+            });
+
+            document.addEventListener("mousemove", (e) => {
+                if (dragged) {
+                        const zoneRect = tryOnZone.getBoundingClientRect();
+                        let newLeft = e.clientX - zoneRect.left - offsetX;
+                        let newTop = e.clientY - zoneRect.top - offsetY;
+
+                        // Обмеження в межах зони
+                        newLeft = Math.max(0, Math.min(zoneRect.width - dragged.offsetWidth, newLeft));
+                        newTop = Math.max(0, Math.min(zoneRect.height - dragged.offsetHeight, newTop));
+
+                        dragged.style.left = newLeft + "px";
+                        dragged.style.top = newTop + "px";
+                }
+            });
+
+            document.addEventListener("mouseup", () => {
+                if (dragged) {
+                    dragged = null;
+                }
             });
       </script>
       
